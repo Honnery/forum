@@ -1,0 +1,132 @@
+2019-12-07 16:46:38,897 ERROR: Exception on /post/post [GET] [in /home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for integer: "post"
+LINE 3: WHERE post.id = 'post' 
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/honery/Documents/cursach/app/routes.py", line 167, in post
+    post = Post.query.filter_by(id=post_id).first()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3240, in first
+    ret = list(self[0:1])
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3342, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3367, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "post"
+LINE 3: WHERE post.id = 'post' 
+                        ^
+
+[SQL: SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.id = %(id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'id_1': 'post', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+2019-12-07 16:46:39,509 ERROR: Exception on /post/post [GET] [in /home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for integer: "post"
+LINE 3: WHERE post.id = 'post' 
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/honery/Documents/cursach/app/routes.py", line 167, in post
+    post = Post.query.filter_by(id=post_id).first()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3240, in first
+    ret = list(self[0:1])
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3342, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3367, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "post"
+LINE 3: WHERE post.id = 'post' 
+                        ^
+
+[SQL: SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.id = %(id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'id_1': 'post', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)

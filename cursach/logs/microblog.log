@@ -1,0 +1,23 @@
+2019-12-07 17:14:49,720 INFO: Microblog startup [in /home/honery/Documents/cursach/app/__init__.py:33]
+2019-12-07 17:14:57,791 ERROR: Exception on /edit_profile [GET] [in /home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/honery/Documents/cursach/app/routes.py", line 127, in edit_profile
+    form.contact_info.data = current_user.contact_info
+  File "/home/honery/Documents/cursach/.env/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'contact_info'
+2019-12-07 17:16:11,345 INFO: Microblog startup [in /home/honery/Documents/cursach/app/__init__.py:33]
